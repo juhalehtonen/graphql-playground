@@ -37,8 +37,12 @@ The two most popular and most sophisticated GraphQL clients today are called [Ap
 ### Relay
 *[Relay](https://facebook.github.io/relay/)* is a very opinionated, React-focused client. It has less flexibility and dictates the structure of your application more, but comes with arguably greater developer experience and productivity if you are specifically building a React or React Native app. Relay also sets some Relay-specific requirements for the server GraphQL schema.
 
+Relay is split into a 'classic' and 'modern' implementation and the guides you find around the web might differ a bit depending on which version the guides were written for.
+
 ### Apollo
 *[Apollo](https://www.apollographql.com/)* is completely framework agnostic, and allows you to customize your usage a lot to suit your needs (from very lightweight integrations to more sophisticated uses). It is easier to get started with, but requires more manual work. Apollo works with any GraphQL schema.
+
+Apollo docs are ok, and the tutorials you find for it are fairly straightforward.
 
 ### Notes
 *Note*: while Relay is more directly geared towards React, both follow a fairly similar approach when used in a React application (using higher-order components and making data available to the component via props).
@@ -48,7 +52,7 @@ The two most popular and most sophisticated GraphQL clients today are called [Ap
 
 ## How I studied
 
-My primary way of learning GraphQL in this learning day was to build a simple GraphQL API server with Elixir and implementing a client to interact with that API using Apollo.
+My primary way of learning GraphQL in this learning day was to build a simple GraphQL API server with Elixir and implementing a client to interact with that API using Apollo and Vue.
 
 In addition to the official GraphQL website, the primary source of information for my learning day was the [eBook](https://pragprog.com/book/wwgraphql/craft-graphql-apis-in-elixir-with-absinthe) "Craft GraphQL APIs in Elixir with Absinthe" by Bruce Williams and Ben Wilson.
 
@@ -57,8 +61,9 @@ Additionally, the [How To GraphQL](https://www.howtographql.com) site provided v
 
 ## Other notes
 
-The [GraphiQL](https://github.com/graphql/graphiql) tool for exploring GraphQL APIs is super valuable for development and testing. It ships with the Elixir Absinthe library so I got to use it with zero setup.
-
+- The [GraphiQL](https://github.com/graphql/graphiql) tool for exploring GraphQL APIs is super valuable for development and testing. It ships with the Elixir Absinthe library so I got to use it with zero setup.
+- GraphQL seems quite awesome
+- REST still has more built-in tooling in frameworks etc, so using it might be worthwhile if you know your API usage patterns will be OK with it
 
 ## License
 
