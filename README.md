@@ -28,7 +28,7 @@ Other differences of GraphQL (compared to REST) include:
 
 As many GraphQL backends often expose their API over HTTP where queries can be sent in the body of a POST request, it is often fully possible to interact with the GraphQL API directly by using just things like the fetch API of JavaScript.
 
-The downside of this approach is that you will need to think about many cases by yourself, such as data caching, framework integration (e.g. Vue, React), pagination, and management of websockets when using GraphQL subscriptions.
+The downside of this approach is that you will need to think about many cases by yourself, such as data caching, framework integration (e.g. Vue, React), pagination, and management of websockets when using GraphQL subscriptions. *This is why you will most likely want to use a dedicated GraphQL client*.
 
 The two most popular and most sophisticated GraphQL clients today are called [Apollo](https://www.apollographql.com/) and [Relay](https://facebook.github.io/relay/).
 
