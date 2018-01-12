@@ -47,3 +47,8 @@ The two most popular and most sophisticated GraphQL clients today are called [Ap
 ## How I studied
 
 In addition to the official GraphQL website, the primary source of information for my learning day was the [eBook](https://pragprog.com/book/wwgraphql/craft-graphql-apis-in-elixir-with-absinthe) "Craft GraphQL APIs in Elixir with Absinthe" by Bruce Williams and Ben Wilson.
+
+
+## License
+
+Licensed under the MIT license. See LICENSE file for more details.
