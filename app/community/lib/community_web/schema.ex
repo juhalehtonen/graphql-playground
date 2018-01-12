@@ -18,6 +18,16 @@ defmodule CommunityWeb.Schema do
     field :description, non_null(:string)
   end
 
+  # Mutation for creating links
+  mutation do
+    field :create_link, :link do
+      arg :url, non_null(:string)
+      arg :description, non_null(:string)
+
+      resolve &NewsResolver.create_link/3
+    end
+  end
+
   # This is the query entry point to our app
   query do
     # Here we specify the field for a resolver by using the resolve macro and passing it a function:
