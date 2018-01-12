@@ -53,6 +53,11 @@ In addition to the official GraphQL website, the primary source of information f
 Additionally, the [How To GraphQL](https://www.howtographql.com) site provided valuable (yet free!) tutorials and other materials.
 
 
+## Other notes
+
+The [GraphiQL](https://github.com/graphql/graphiql) tool for exploring GraphQL APIs is super valuable for development and testing. It ships with the Elixir Absinthe library so I got to use it with zero setup.
+
+
 ## License
 
 Licensed under the MIT license. See LICENSE file for more details.
