@@ -13,7 +13,7 @@ import App from './App.vue'
 // Note that this is setup for development/demo - deployment will require your real URL.
 const httpLink = new HttpLink({
   // You should use an absolute URL here
-  uri: 'http://localhost:4000/graphql',
+  uri: 'http://localhost:4000/api/graphiql',
 })
 
 // Create the apollo client, with the Apollo caching.
