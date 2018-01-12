@@ -7,6 +7,10 @@
         {{ link.url }}
       </li>
     </ul>
+
+    <input v-model="newLinkURL" placeholder="URL">
+    <input v-model="newLinkDesc" placeholder="Description">
+    <button v-on:click="createLink">Add new</button>
   </div>
 </template>
 
@@ -17,14 +21,14 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js & Phoenix & GraphQL App',
-      allLinks: [] // Apollo will assign the result of its "user" query here!
+      newLinkURL: '',
+      newLinkDesc: '',
+      allLinks: [] // Apollo will assign the result of its "allLinks" query here!
     }
   },
  apollo: {
     // Apollo specific options
-    // Here, we use gql to describe the data we want: a user with ID 1, and
-    // Apollo will assign the result of that query to the 'user' key in data.
-
+    // Here, we use gql to describe the data we want.
     allLinks: gql`{
       allLinks {
         id
@@ -32,6 +36,59 @@ export default {
         description
       }
     }`
+  },
+  methods: {
+    createLink: function () {
+          // We save the user input in case of an error
+          const newLink = this.newLink
+          // We clear it early to give the UI a snappy feel
+          this.newLink = ''
+          // Call to the graphql mutation
+          this.$apollo.mutate({
+            // Query
+            mutation: gql`mutation ($url: String!, $description: String!) {
+              addTag(url: $url, description: $description) {
+                id
+                url
+                description
+              }
+            }`,
+            // Parameters
+            variables: {
+              url: newLink,
+            },
+            // Update the cache with the result
+            // The query will be updated with the optimistic response
+            // and then with the real result of the mutation
+            update: (store, { data: { newLink } }) => {
+              // Read the data from our cache for this query.
+              //const data = store.readQuery({ query: LINKS_QUERY })
+              // Add our tag from the mutation to the end
+              data.links.push(newLink)
+              // Write our data back to the cache.
+              //store.writeQuery({ query: LINKS_QUERY, data })
+            },
+            // Optimistic UI
+            // Will be treated as a 'fake' result as soon as the request is made
+            // so that the UI can react quickly and the user be happy
+            optimisticResponse: {
+              __typename: 'Mutation',
+              createLink: {
+                __typename: 'Link',
+                id: -1,
+                label: newLink,
+              },
+            },
+          }).then((data) => {
+            // Result
+            console.log(data)
+          }).catch((error) => {
+            // Error
+            console.error(error)
+            // We restore the initial user input
+            this.newLink = newLink
+          })
+    }
   }
 }
 </script>

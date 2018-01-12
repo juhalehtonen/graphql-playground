@@ -1,5 +1,8 @@
 # Community
 
+A very minimal Elixir + Vue app for fetching and presenting data via GraphQL using Apollo.
+
+## Sample queries
 Example GraphQL query of getting all links:
 
 ```
