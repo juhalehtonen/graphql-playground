@@ -17,6 +17,12 @@ This specificity comes with numerous benefits:
 
 GraphQL has incrementally gained wider adoptation, with the likes of GitHub using GraphQL instead of REST on [their v4 API](https://developer.github.com/v4/).
 
+Other differences of GraphQL (compared to REST) include:
+- The description of a resource is not coupled to the way you retrieve it
+- Instead of using URLs to identify what is available in the API, you use a GraphQL schema
+- Related resources can be fetched with a single request
+- Instead of changing between GET/POST to specify a read/write, you change a keyword in the query
+- Requested types are strictly checked before executing code  
 
 ## Clients
 
