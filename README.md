@@ -1,0 +1,36 @@
+# GraphQL Playground
+
+This repo contains code and notes from my January 2018 learning day under the GraphQL topic. A learning day is a day-a-month event at [Evermade](https://www.evermade.fi) where each developer can pick a topic of their interest and spend a full day on learning the technology as they best see fit. The only requirement is that the developer produces enough notes and code to be able to share their learnings onwards to fellow developers and co-workers.
+
+
+## What is GraphQL?
+
+[GraphQL](http://graphql.org/) is a strongly typed data query language for APIs. Facebook began work on GraphQL internally in 2012, and released it as open source software in 2015.
+
+Most typically, GraphQL is used as an alternative (or sometimes as complimentary) to REST. The biggest singular difference between the two is that unlike REST, GraphQL allows the client to define the structure of the data required, and the exact same structure is then returned from the GraphQL server.
+
+This specificity comes with numerous benefits:
+
+- Smaller payloads sent to clients, many of which can be mobile devices where download size is important
+- Less parsing on the client (so better performance), as the client only receives exactly what it needs and uses just that
+- Allows replacing multiple REST requests with a single GraphQL request, which allows servers to work more efficiently
+
+GraphQL has incrementally gained wider adoptation, with the likes of GitHub using GraphQL instead of REST on [their v4 API](https://developer.github.com/v4/).
+
+
+## Clients
+
+As many GraphQL backends often expose their API over HTTP where queries can be sent in the body of a POST request, it is often fully possible to interact with the GraphQL API directly by using just things like the fetch API of JavaScript.
+
+The downside of this approach is that you will need to think about many cases by yourself, such as data caching, framework integration (e.g. Vue, React), pagination, and management of websockets when using GraphQL subscriptions.
+
+The two most popular and most sophisticated GraphQL clients today are called [Apollo](https://www.apollographql.com/) and [Relay](https://facebook.github.io/relay/).
+
+
+
+Note: while the primary application of GraphQL is for clients that do not co-locate with the server code (e.g. mobile apps and SPAs), there is nothing that stops you from using GraphQL to power your server-side rendered interfaces.
+
+
+## How I studied
+
+In addition to the official GraphQL website, the primary source of information for my learning day was the [eBook](https://pragprog.com/book/wwgraphql/craft-graphql-apis-in-elixir-with-absinthe) "Craft GraphQL APIs in Elixir with Absinthe" by Bruce Williams and Ben Wilson.
