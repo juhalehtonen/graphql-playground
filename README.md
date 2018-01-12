@@ -2,6 +2,8 @@
 
 This repo contains code and notes from my January 2018 learning day under the GraphQL topic. A learning day is a day-a-month event at [Evermade](https://www.evermade.fi) where each developer can pick a topic of their interest and spend a full day on learning the technology as they best see fit. The only requirement is that the developer produces enough notes and code to be able to share their learnings onwards to fellow developers and co-workers.
 
+*Psst...* This README is about GraphQL in general. If you want to read about my Elixir application instead, head over to `app/README.md`.
+
 
 ## What is GraphQL?
 
@@ -47,6 +49,8 @@ The two most popular and most sophisticated GraphQL clients today are called [Ap
 ## How I studied
 
 In addition to the official GraphQL website, the primary source of information for my learning day was the [eBook](https://pragprog.com/book/wwgraphql/craft-graphql-apis-in-elixir-with-absinthe) "Craft GraphQL APIs in Elixir with Absinthe" by Bruce Williams and Ben Wilson.
+
+Additionally, the [How To GraphQL](https://www.howtographql.com) site provided valuable (yet free!) tutorials and other materials.
 
 
 ## License
