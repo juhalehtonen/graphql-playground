@@ -26,9 +26,16 @@ The downside of this approach is that you will need to think about many cases by
 
 The two most popular and most sophisticated GraphQL clients today are called [Apollo](https://www.apollographql.com/) and [Relay](https://facebook.github.io/relay/).
 
+### Relay
+*Relay* is a very opinionated, React-focused client. It has less flexibility and dictates the structure of your application more, but comes with arguably greater developer experience and productivity if you are specifically building a React or React Native app. Relay also sets some Relay-specific requirements for the server GraphQL schema.
 
+### Apollo
+*Apollo* is completely framework agnostic, and allows you to customize your usage a lot to suit your needs (from very lightweight integrations to more sophisticated uses). It is easier to get started with, but requires more manual work. Apollo works with any GraphQL schema.
 
-Note: while the primary application of GraphQL is for clients that do not co-locate with the server code (e.g. mobile apps and SPAs), there is nothing that stops you from using GraphQL to power your server-side rendered interfaces.
+### Notes
+*Note*: while Relay is more directly geared towards React, both follow a fairly similar approach when used in a React application (using higher-order components and making data available to the component via props).
+
+*Note*: while the primary application of GraphQL is for clients that do not co-locate with the server code (e.g. mobile apps and SPAs), there is nothing that stops you from using GraphQL to power your server-side rendered interfaces.
 
 
 ## How I studied
