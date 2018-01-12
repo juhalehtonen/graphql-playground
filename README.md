@@ -2,7 +2,7 @@
 
 This repo contains code and notes from my January 2018 learning day under the GraphQL topic. A learning day is a day-a-month event at [Evermade](https://www.evermade.fi) where each developer can pick a topic of their interest and spend a full day on learning the technology as they best see fit. The only requirement is that the developer produces enough notes and code to be able to share their learnings onwards to fellow developers and co-workers.
 
-*Psst...* This README is about GraphQL in general. If you want to read about my Elixir application instead, head over to `app/README.md`.
+*Psst...* This README is about GraphQL in general. If you want to read about my Elixir application instead, head over to `app/community`.
 
 
 ## What is GraphQL?
