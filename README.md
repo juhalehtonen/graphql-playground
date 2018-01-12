@@ -48,6 +48,8 @@ The two most popular and most sophisticated GraphQL clients today are called [Ap
 
 ## How I studied
 
+My primary way of learning GraphQL in this learning day was to build a simple GraphQL API server with Elixir and implementing a client to interact with that API using Apollo.
+
 In addition to the official GraphQL website, the primary source of information for my learning day was the [eBook](https://pragprog.com/book/wwgraphql/craft-graphql-apis-in-elixir-with-absinthe) "Craft GraphQL APIs in Elixir with Absinthe" by Bruce Williams and Ben Wilson.
 
 Additionally, the [How To GraphQL](https://www.howtographql.com) site provided valuable (yet free!) tutorials and other materials.
